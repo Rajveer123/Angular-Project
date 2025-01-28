@@ -34,4 +34,11 @@ export class LoginComponent {
     }
     this.buttonDisabled = this.count > 0 ? false : true;
   }
+  handleEvents(event: Event){
+    console.log('Event type : ' + event.type);
+    console.log('Target : ' + event.target);
+    if(event.target as HTMLInputElement){
+      console.log('Value : ' + (event.target as HTMLInputElement).value);
+    }
+  }
 }
