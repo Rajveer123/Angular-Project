@@ -18,4 +18,20 @@ export class LoginComponent {
     console.log('Total number: '+ (a+b+this.experiance));
     console.log('Title: '+ this.title);
   }
+  count = 0;
+  handleButtonClicked(type: string){
+    switch(type){ 
+      case 'Increment':
+        this.count = this.count+1;
+        break;
+      case 'Decrement':
+        if(this.count > 0) {
+          this.count = this.count-1;
+        }
+        break;
+      default:
+        this.count = 0;
+        break;
+    }
+}
 }
