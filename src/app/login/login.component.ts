@@ -11,27 +11,27 @@ export class LoginComponent {
   experiance = 2
   handleButtonClick() {
     this.experiance++;
-    console.log('Button clicked :'+ this.experiance);
+    console.log('Button clicked :' + this.experiance);
   }
-  calculateNumbers(a: number, b: number){
+  calculateNumbers(a: number, b: number) {
     this.handleButtonClick();
-    console.log('Total number: '+ (a+b+this.experiance));
-    console.log('Title: '+ this.title);
+    console.log('Total number: ' + (a + b + this.experiance));
+    console.log('Title: ' + this.title);
   }
   count = 0;
-  handleButtonClicked(type: string){
-    switch(type){ 
+  buttonDisabled: boolean = true;
+  handleButtonClicked(type: string) {
+    switch (type) {
       case 'Increment':
-        this.count = this.count+1;
+        this.count = this.count + 1;
         break;
       case 'Decrement':
-        if(this.count > 0) {
-          this.count = this.count-1;
-        }
+        this.count = this.count - 1;
         break;
       default:
         this.count = 0;
         break;
     }
-}
+    this.buttonDisabled = this.count > 0 ? false : true;
+  }
 }
