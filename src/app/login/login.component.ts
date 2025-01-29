@@ -1,4 +1,4 @@
-import { Component, effect, signal } from '@angular/core';
+import { Component, computed, effect, Signal, signal, WritableSignal } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -7,6 +7,8 @@ import { Component, effect, signal } from '@angular/core';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+  writableSignal: WritableSignal<string | number> = signal(10)
+  readOnlySignal: Signal<number> = computed(() =>45)
   ageCount = signal(10);
   title = 'Rajveer First Angular Application';
   experiance = 2
