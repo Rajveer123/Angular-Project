@@ -1,24 +1,108 @@
+<hr />
 <p>Rajver singh login works!!!</p>
-<h2 style="border-color: red; padding: 10; color: blue;">{{title}}</h2>
-<h2 style="background-color: aquamarine;">{{experiance}}</h2>
-<h1>{{email}}</h1>
-<input type="text" id="textBox"  placeholder="enter email address" style="border: 1px; background-color: antiquewhite;border-color: blue;" (input)="handleEvents($event)" #emailField />
+<h1>
+  Demo code for button click and binding between Typescript and Html code.
+</h1>
+<h2 style="background-color: aquamarine">{{ experiance }}</h2>
+<h1>{{ email }}</h1>
+<input
+  type="text"
+  id="textBox"
+  placeholder="enter email address"
+  style="border: 1px; background-color: antiquewhite; border-color: blue"
+  (input)="handleEvents($event)"
+  #emailField
+/>
 <button type="button" (click)="getEmail(emailField.value)">Get Email</button>
 <button type="button" (click)="calculateNumbers(10, 20)">Calculate Me</button>
-<button type="button" (click)="handleButtonClick()">{{!toggle ? 'Show Red Div' : 'Show Green Div'}}</button>
+<button type="button" (click)="handleButtonClick()">
+  {{ !toggle ? "Show Red Div" : "Show Green Div" }}
+</button>
 @if(toggle){
-    <div style="background-color: red; height: 100px; width: 100px;"></div>
+<div style="background-color: red; height: 100px; width: 100px"></div>
 }@else {
-    <div style="background-color: green; height: 100px; width: 100px;"></div>
+<div style="background-color: green; height: 100px; width: 100px"></div>
 }
-<h1 >Counter App</h1>
+<hr />
+<h1 style="text-align: center">Counter App</h1>
 <div class="mainContainer">
-    <h1 class="count">{{count}}</h1>
-    <div (mouseenter)="handleEvents($event)" 
-    (mouseleave)="handleEvents($event)" 
-    (click)="handleEvents($event)">
-    <button class="btn btn-red" (click)="handleButtonClicked('Increment')">Increment</button>
-    <button class="btn btn-green" (click)="handleButtonClicked('Reset')">Reset</button>
-    <button class="btn btn-blue" [disabled]="buttonDisabled" (click)="handleButtonClicked('Decrement')">Decrement</button>
-    </div>
+  <h1 class="count">{{ count }}</h1>
+  <div
+    (mouseenter)="handleEvents($event)"
+    (mouseleave)="handleEvents($event)"
+    (click)="handleEvents($event)"
+  >
+    <button class="btn btn-red" (click)="handleButtonClicked('Increment')">
+      Increment
+    </button>
+    <button class="btn btn-green" (click)="handleButtonClicked('Reset')">
+      Reset
+    </button>
+    <button
+      class="btn btn-blue"
+      [disabled]="buttonDisabled"
+      (click)="handleButtonClicked('Decrement')"
+    >
+      Decrement
+    </button>
+  </div>
 </div>
+<hr />
+<h1>Demo code for using For Loop in Html</h1>
+<table class="fixed">
+  <col width="25%" />
+  <col width="25%" />
+  <col width="25%" />
+  <col width="25%" />
+
+  @for(student of students; track $index) {
+  <tr
+    style="
+      background-color: aqua;
+      color: black;
+      padding: 20px;
+      text-align: center;
+      width: 100%;
+    "
+  >
+    {{
+      $index
+    }}
+  </tr>
+  <td
+    style="
+      background-color: red;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    "
+  >
+    {{ student.name }}
+  </td>
+  <td
+    style="
+      background-color: green;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    "
+  >
+    {{ student.age }}
+  </td>
+  <td
+    style="
+      background-color: blue;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    "
+  >
+    {{ student.grade }}
+  </td>
+  <td>
+    <button name="button" (click)="getSelectedStudentName(student.name)">
+      Get Selected Student Name
+    </button>
+  </td>
+  }
+</table>

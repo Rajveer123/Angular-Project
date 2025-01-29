@@ -48,4 +48,40 @@ export class LoginComponent {
     console.log('getEmail :'+ value);
     this.email = value;
   }
+  students = [{
+    name: 'John',
+    age: 80,
+    grade: 'A'
+  },{
+    name: 'Joshua',
+    age: 78,
+    grade: 'B'
+  },{
+    name: 'Josh',
+    age: 34,
+    grade: 'C'
+  },{
+    name: 'Johan',
+    age: 67,
+    grade: 'D'
+  },{
+    name: 'Tonny',
+    age: 56,
+    grade: 'E'
+  },{
+    name: 'Tom',
+    age: 34,
+    grade: 'F'
+  },{
+    name: 'Harry',
+    age: 56,
+    grade: 'G'
+  },{
+    name: 'Hudson',
+    age: 25,
+    grade: 'H'
+  }];
+  getSelectedStudentName(studentName : string) {
+    alert('Selected Student name is ' + studentName);
+  }
 }
