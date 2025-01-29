@@ -1,9 +1,16 @@
 <p>Rajver singh login works!!!</p>
 <h2 style="border-color: red; padding: 10; color: blue;">{{title}}</h2>
 <h2 style="background-color: aquamarine;">{{experiance}}</h2>
-<input type="text" id="textBox" style="border: 1px; background-color: antiquewhite;border-color: blue;" (input)="handleEvents($event)" />
+<h1>{{email}}</h1>
+<input type="text" id="textBox"  placeholder="enter email address" style="border: 1px; background-color: antiquewhite;border-color: blue;" (input)="handleEvents($event)" #emailField />
+<button type="button" (click)="getEmail(emailField.value)">Get Email</button>
 <button type="button" (click)="calculateNumbers(10, 20)">Calculate Me</button>
-<button type="button" (click)="handleButtonClick()">Clic Me</button>
+<button type="button" (click)="handleButtonClick()">{{!toggle ? 'Show Red Div' : 'Show Green Div'}}</button>
+@if(toggle){
+    <div style="background-color: red; height: 100px; width: 100px;"></div>
+}@else {
+    <div style="background-color: green; height: 100px; width: 100px;"></div>
+}
 <h1 >Counter App</h1>
 <div class="mainContainer">
     <h1 class="count">{{count}}</h1>

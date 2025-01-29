@@ -9,8 +9,10 @@ import { Component } from '@angular/core';
 export class LoginComponent {
   title = 'Rajveer First Angular Application';
   experiance = 2
+  toggle = false
   handleButtonClick() {
     this.experiance++;
+    this.toggle = !this.toggle
     console.log('Button clicked :' + this.experiance);
   }
   calculateNumbers(a: number, b: number) {
@@ -40,5 +42,10 @@ export class LoginComponent {
     if(event.target as HTMLInputElement){
       console.log('Value : ' + (event.target as HTMLInputElement).value);
     }
+  }
+  email:string = ""
+  getEmail(value: string){
+    console.log('getEmail :'+ value);
+    this.email = value;
   }
 }
