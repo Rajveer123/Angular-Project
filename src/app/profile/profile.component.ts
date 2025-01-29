@@ -10,4 +10,13 @@ import { FormsModule } from '@angular/forms';
 export class ProfileComponent {
 users = ["user1", "user2", "user3", "user4", "user5", "user6", "user7", "user8"];
 name = "Rajveer";
+task = "";
+todoList:{name:string, id:number}[] = []
+addTask(){
+this.todoList.push({name:this.task, id:this.todoList.length+1});
+this.task = "";
+}
+deleteTask(id:number){
+this.todoList = this.todoList.filter(item => item.id!==id);
+}
 }

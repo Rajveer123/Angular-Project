@@ -28,3 +28,20 @@
 <h1>Two Way Binding Demo</h1>
 <input type="text" placeholder="enter user name" [(ngModel)]="name"/>
 <h1>Welcome {{name}}</h1>
+<hr>
+<h1>Todo List App Demo</h1>
+<h1>Add Todo</h1>
+<input type="text" [(ngModel)]="task"/>
+<button (click)="addTask()">Add Todo</button>
+<ul style="display: flex; justify-content: space-between;list-style-type: none;">
+    <li>No</li>
+    <li>Todo Name</li>
+    <li>Action</li>
+</ul>
+@for (todo of todoList; track todo.id) {
+    <ul style="display: flex; justify-content: space-between;list-style-type: none;">
+        <li>{{$index+1}}</li>
+        <li>{{todo.name}}</li>
+        <li><button (click)="deleteTask(todo.id)">Delete Task</button></li>
+    </ul>
+}
