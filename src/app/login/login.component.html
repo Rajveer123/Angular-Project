@@ -50,10 +50,11 @@
 <hr />
 <h1>Demo code for using For Loop in Html</h1>
 <table class="fixed">
-  <col width="25%" />
-  <col width="25%" />
-  <col width="25%" />
-  <col width="25%" />
+  <col width="20%" />
+  <col width="20%" />
+  <col width="20%" />
+  <col width="20%" />
+  <col width="20%" />
 
   @for(student of students; track $index) {
   <tr
@@ -103,6 +104,15 @@
     <button name="button" (click)="getSelectedStudentName(student.name)">
       Get Selected Student Name
     </button>
+  </td>
+  <td>
+    <h1>Age : {{ageCount()}}</h1>
+    <button name="incButton" (click)="ageCount.set(ageCount()+1)">
+      Increment Age
+    </button>
+    <button name="decButton" (click)="ageCount.set(ageCount()-1)">
+        Decrement Age
+      </button>
   </td>
   }
 </table>

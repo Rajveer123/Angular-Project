@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, effect, signal } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +7,15 @@ import { Component } from '@angular/core';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+  ageCount = signal(10);
   title = 'Rajveer First Angular Application';
   experiance = 2
   toggle = false
+  constructor(){
+    effect(()=>{
+      console.log('Value of ageCount is '+this.ageCount())
+    })
+  }
   handleButtonClick() {
     this.experiance++;
     this.toggle = !this.toggle
@@ -84,4 +90,5 @@ export class LoginComponent {
   getSelectedStudentName(studentName : string) {
     alert('Selected Student name is ' + studentName);
   }
+  
 }
