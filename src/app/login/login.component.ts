@@ -8,6 +8,10 @@ import { Component, computed, effect, Signal, signal, WritableSignal } from '@an
 })
 export class LoginComponent {
   writableSignal: WritableSignal<string | number> = signal(10)
+  counter = signal(0)
+  x = signal(10)
+  y = signal(20)
+  z = computed(() => this.x()+this.y())
   readOnlySignal: Signal<number> = computed(() =>45)
   ageCount = signal(10);
   title = 'Rajveer First Angular Application';
@@ -15,12 +19,16 @@ export class LoginComponent {
   toggle = false
   constructor(){
     effect(()=>{
+      if(this.counter() == 3){
+        alert('count value is 3 now')
+      }
       console.log('Value of ageCount is '+this.ageCount())
     })
   }
   handleButtonClick() {
     this.experiance++;
     this.toggle = !this.toggle
+    this.counter.set(this.counter()+1)
     console.log('Button clicked :' + this.experiance);
   }
   calculateNumbers(a: number, b: number) {
