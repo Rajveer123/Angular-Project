@@ -1,8 +1,9 @@
 import { Component, computed, effect, Signal, signal, WritableSignal } from '@angular/core';
+import { ProfileComponent } from '../profile/profile.component';
 
 @Component({
   selector: 'app-login',
-  imports: [],
+  imports: [ProfileComponent],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })

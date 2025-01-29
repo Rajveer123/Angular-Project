@@ -1,0 +1,30 @@
+<hr>
+<h1>For Loop contextual Variables Demo</h1>
+@for(user of users; track user;){
+<h1>Total Count is {{$count}}</h1>
+@if($first){
+    <h3 style="background-color: red;">{{$index}} number user name is {{user}}</h3>
+}
+@if($last){
+    <h3 style="background-color: green;">{{user}}</h3>
+}
+@else {
+    <h3 style="background-color: blue;">{{user}}</h3>
+}
+}
+@empty {
+    <h1>No Users Found.</h1>
+}
+<hr>
+@for(user of users; track user;) {
+    @if($odd) {
+    <h2 style="background-color: red;">{{user}}</h2>
+    }
+    @if($even) {
+    <h2 style="background-color: green;">{{user}}</h2>
+    }
+}
+<hr>
+<h1>Two Way Binding Demo</h1>
+<input type="text" placeholder="enter user name" [(ngModel)]="name"/>
+<h1>Welcome {{name}}</h1>
