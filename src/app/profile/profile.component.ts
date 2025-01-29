@@ -8,6 +8,10 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './profile.component.css'
 })
 export class ProfileComponent {
+bgColor = "red";
+bigFontSize = 60;
+samllFontSize = 20;
+toggle = false;
 users = ["user1", "user2", "user3", "user4", "user5", "user6", "user7", "user8"];
 name = "Rajveer";
 task = "";
@@ -18,5 +22,8 @@ this.task = "";
 }
 deleteTask(id:number){
 this.todoList = this.todoList.filter(item => item.id!==id);
+}
+changeFont(){
+  this.toggle =!this.toggle;
 }
 }

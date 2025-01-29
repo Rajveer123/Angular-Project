@@ -45,3 +45,9 @@
         <li><button (click)="deleteTask(todo.id)">Delete Task</button></li>
     </ul>
 }
+<hr>
+<h1>Dyanmic Styles Demo</h1>
+<h1 [style.background-color]="bgColor">Dynamic Background Color Changes</h1>
+<h1 [style.fontSize.px]="toggle ? bigFontSize : samllFontSize">Dynamic Font Size Changes</h1>
+<button (click)="changeFont()">Change Font Size</button>
+<hr>
