@@ -11,4 +11,10 @@
   <li>
     <a routerLink="/login">Login</a>
   </li>
+  <li>
+    <h1>Pass Below Entered User Login Credetnails into Login Page using Router Link</h1>
+    <input type="text" [(ngModel)]="username" placeholder="Username"><br><br>
+    <input type="password" [(ngModel)]="password" placeholder="Password"><br><br>
+    <a [routerLink]="['login',{name:username, pass: password}]">Go to Login Page </a>
+  </li>
 </ul>

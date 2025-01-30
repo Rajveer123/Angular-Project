@@ -1,1 +1,4 @@
-<h1>Welcome to Login Page</h1>
+<div *ngIf="username!= undefined; else elseblock;">
+<h1>Welcome to Login Page Mr {{username}} having password {{password}}.</h1></div>
+<ng-template #elseblock><h1>Welcome to Login Page.</h1></ng-template>
+
