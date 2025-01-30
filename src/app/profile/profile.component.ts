@@ -1,9 +1,10 @@
+import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-profile',
-  imports: [FormsModule],
+  imports: [FormsModule, NgIf,NgFor,NgSwitch,NgSwitchCase, NgSwitchDefault],
   templateUrl: './profile.component.html',
   styleUrl: './profile.component.css'
 })
@@ -25,5 +26,12 @@ this.todoList = this.todoList.filter(item => item.id!==id);
 }
 changeFont(){
   this.toggle =!this.toggle;
+}
+handleToggle(){
+  this.toggle = !this.toggle;
+}
+color = "red";
+handleColorChanged(color:string) {
+this.color = color;
 }
 }
