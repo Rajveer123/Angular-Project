@@ -1,0 +1,36 @@
+.mainContainer{
+    text-align: center;
+}
+.btn{
+    height: 100px;
+    width: 100px;
+    border-color: 1px solid black;
+    margin: 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.btn-red{
+    background-color: red;
+}
+.btn-blue{
+    background-color: blue;
+}
+.btn-green{
+    background-color: green;
+}
+.btn-hovered{
+    border-color: 1px solid blueviolet;
+}
+.count{
+    width: 100px;
+    background-color: gray;
+    border-radius: 10%;
+    margin: auto;
+    margin-bottom: 30px;
+    color: white;
+    padding: 10px;
+    font-size: 30px;
+}
+table.fixed { table-layout:fixed; }
+table.fixed td { overflow: hidden; }
