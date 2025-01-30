@@ -6,8 +6,13 @@ import { ProfileComponent } from './profile/profile.component';
 import { AboutComponent } from './about/about.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { ExamplepagesComponent } from './examplepages/examplepages.component';
+import { HomeComponent } from './home/home.component';
 
 export const routes: Routes = [{
+    path: '',//Defining Root Component Path
+    component: HomeComponent,
+ },
+ {
     path: 'demopages',
     component: DemopagesComponent,
 },
@@ -34,4 +39,5 @@ export const routes: Routes = [{
  {
     path: 'contactus',
     component: ContactusComponent,
-}];
+}
+];
