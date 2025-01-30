@@ -7,9 +7,11 @@ import { AboutComponent } from './about/about.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { ExamplepagesComponent } from './examplepages/examplepages.component';
 import { HomeComponent } from './home/home.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 export const routes: Routes = [{
-    path: '',//Defining Root Component Path
+    //Defining Root Component Path
+    path: '',
     component: HomeComponent,
  },
  {
@@ -39,5 +41,11 @@ export const routes: Routes = [{
  {
     path: 'contactus',
     component: ContactusComponent,
+},
+{
+   //Defining Wildcard Entry Component at the end of all routes defined.
+   //It will open mentioned page when user accedently entered incorrect url to access sight
+   path: '**',
+   component: PageNotFoundComponent,
 }
 ];
