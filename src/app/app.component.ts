@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { DemopagesComponent } from "./demopages/demopages.component";
+import { ExamplepagesComponent } from "./examplepages/examplepages.component";
 
 @Component({
   selector: 'app-root',
-  imports: [DemopagesComponent],
+  imports: [ExamplepagesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
