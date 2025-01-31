@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormsModule, NgModel } from '@angular/forms';
+import { FormsModule} from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 
 @Component({
@@ -9,6 +9,7 @@ import { Router, RouterLink } from '@angular/router';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+constructor(private router: Router){}
 username:string = "";
 password:string = "";
 users = [
@@ -20,10 +21,8 @@ users = [
   {name : "Peter", id: 9},
   {name : "Scott", id: 10}
 ];
-  constructor(private router: Router){}
   sendUserName()
   {
     this.router.navigate(['profile', { name: 'Rajveer Singh'}]);
   }
-
 }
