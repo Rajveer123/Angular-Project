@@ -11,7 +11,15 @@ import { Router, RouterLink } from '@angular/router';
 export class HomeComponent {
 username:string = "";
 password:string = "";
-
+users = [
+  {name : "John", id: 2},
+  {name : "Josh", id: 5},
+  {name : "Tom", id: 6},
+  {name : "Garry", id: 7},
+  {name : "Hardy", id: 8},
+  {name : "Peter", id: 9},
+  {name : "Scott", id: 10}
+];
   constructor(private router: Router){}
   sendUserName()
   {

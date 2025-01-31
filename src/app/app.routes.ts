@@ -8,6 +8,7 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { ExamplepagesComponent } from './examplepages/examplepages.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { UserComponent } from './user/user.component';
 
 export const routes: Routes = [{
     //Defining Root Component Path
@@ -25,6 +26,8 @@ export const routes: Routes = [{
 {
     path: 'samplepages',
     component: SamplepagesComponent,
+    //Passgin common data from config file
+    data : {name :'Sample Pages Component'}
 },
 {
     path: 'login',
@@ -41,6 +44,10 @@ export const routes: Routes = [{
  {
     path: 'contactus',
     component: ContactusComponent,
+}, 
+ {
+    path: 'user/:id/:name',
+    component: UserComponent,
 },
 {
    //Defining Wildcard Entry Component at the end of all routes defined.

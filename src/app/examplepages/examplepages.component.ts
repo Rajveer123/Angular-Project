@@ -3,7 +3,7 @@ import { NgFor, NgIf, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/c
 import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-examplepages',
-  imports: [FormsModule, NgIf,NgFor,NgSwitch,NgSwitchCase, NgSwitchDefault],
+  imports: [FormsModule, NgIf,NgSwitch,NgSwitchCase, NgSwitchDefault],
   templateUrl: './examplepages.component.html',
   styleUrl: './examplepages.component.css'
 })

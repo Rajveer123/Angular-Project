@@ -60,9 +60,11 @@
   <h1>Toggle is False</h1>
 </div>
 <ng-template #elseBlock><h1>Toggle is True</h1></ng-template>
-<div *ngFor="let user of users; track: user">
-  <li>{{ user }}</li>
-</div>
+<ul>
+  @for (user of users; track user) {
+    <li>{{ user }}</li>
+  }
+</ul>
 <h1>Change Color By Tapping Below Buttons Dynamically use of ngSwitch Directive</h1>
 <div>
   <button (click)="handleColorChanged('red')">Red</button>

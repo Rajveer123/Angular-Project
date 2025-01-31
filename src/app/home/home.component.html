@@ -18,7 +18,15 @@
     <a [routerLink]="['login',{name:username, pass: password}]">Pass Data as Option Parameter in Login Page </a><br><br>
     <a [routerLink]="['login']" [queryParams]="{name:username, pass: password}">Pass Data as Query Parameter in Login Page </a><br><br>
   <li>
-    <h1>Pass User Name Data into Profile Page using Router Navigation</h1><br>
+    <h1>Pass User Name Data into Profile Page using Router Navigation from TS File</h1><br>
     <button (click)="sendUserName()">Pass Username Data</button>
+  </li>
+  <li>
+    <h1>Using Dynamic Routing passed Id and Name data to User Component</h1><br>
+   <ul>
+    @for (user of users; track user.id) {
+      <li><a routerLink="user/{{user.id}}/{{user.name}}">{{user.name}}</a></li>
+    }
+    </ul>
   </li>
 </ul>
