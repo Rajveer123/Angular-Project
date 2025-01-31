@@ -11,10 +11,14 @@
   <li>
     <a routerLink="/login">Login</a>
   </li>
-  <li>
+  <br>
     <h1>Pass Below Entered User Login Credetnails into Login Page using Router Link</h1>
     <input type="text" [(ngModel)]="username" placeholder="Username"><br><br>
     <input type="password" [(ngModel)]="password" placeholder="Password"><br><br>
-    <a [routerLink]="['login',{name:username, pass: password}]">Go to Login Page </a>
+    <a [routerLink]="['login',{name:username, pass: password}]">Pass Data as Option Parameter in Login Page </a><br><br>
+    <a [routerLink]="['login']" [queryParams]="{name:username, pass: password}">Pass Data as Query Parameter in Login Page </a><br><br>
+  <li>
+    <h1>Pass User Name Data into Profile Page using Router Navigation</h1><br>
+    <button (click)="sendUserName()">Pass Username Data</button>
   </li>
 </ul>

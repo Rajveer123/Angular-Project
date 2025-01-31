@@ -10,6 +10,6 @@ export class ProfileComponent {
   username:string | null = "";
   constructor(private route : ActivatedRoute){}
   ngOnInit(){
-    this.username = this.route.snapshot.paramMap.get("name");
+    this.username = this.route.snapshot.paramMap.get('name');
   }
 }
