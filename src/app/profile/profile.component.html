@@ -1,16 +1,16 @@
 <h1>Welcome to Mr {{username}} Profile Page!</h1>
 <h1>Reactive Form Demo</h1>
-<form action="" method="post">
+<form [formGroup]="profileForm" (ngSubmit)="handleSubmit()">
 <div>
   <label for="name">Name:</label><br>
-  <input type="text" name="name" [formControl]="name" placeholder="Enter Name">
+  <input type="text" id="name" formControlName="name" placeholder="Enter Name">
 </div><br>
 <div>
-    <label for="password">Password:</label><br>
-    <input type="text" name="email" [formControl]="email" placeholder="Enter Eamil Address">
+    <label for="email">Email:</label><br>
+    <input type="text" id="email" formControlName="email" placeholder="Enter Eamil Address">
   </div><br>
-  <button type="button" (click)="submitData()">Submit</button><br><br>
+  <button type="submit">Submit</button><br><br>
   <button type="button" (click)="updateData()">Set Default Values</button>
-  <h1>Name is {{name.value}} and eamil address is {{email.value}}.</h1>
+  <h1>Name is {{profileForm.controls.name.value}} and eamil address is {{profileForm.controls.email.value}}.</h1>
 </form>
 
